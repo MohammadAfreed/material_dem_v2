@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 import './App.css';
-import Single from './pages/single/Single';
 import New from './pages/new/New';
 import Home from './pages/home/Home';
 import List from './pages/list/List';

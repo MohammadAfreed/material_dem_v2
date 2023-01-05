@@ -1,4 +1,4 @@
-import { KeyboardArrowDown, KeyboardArrowUp, KeyboardArrowUpOutlined, MoreVert } from "@mui/icons-material"
+import { KeyboardArrowUpOutlined, MoreVert } from "@mui/icons-material"
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar"
 import "./featured.scss";
 

@@ -1,6 +1,6 @@
 import "./chart.scss"
 import React,{useState,useEffect} from 'react';
-import { LineChart, XAxis, YAxis, CartesianGrid,Line, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, XAxis,Line, Tooltip, ResponsiveContainer } from 'recharts';
 import { CustomTooltip } from "../CustomtoolTip";
 
 export const Chart = () => {
