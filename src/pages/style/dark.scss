@@ -5,6 +5,28 @@
     .chartGrid {
       stroke: rgba(228, 228, 228, 0.219);
     }
+    .product{
+      background-color: #111;
+      .productCell {
+        color: gray;
+      }
+
+    }
+    .container{
+      background-color: #111;
+      
+      
+      .productListItem{
+        color: gray;
+        border: none;
+      }
+      .datagrid{
+        color: gray;
+        border: none;
+      }
+    
+
+    }
   
     .table {
       background-color: #111;
@@ -28,7 +50,7 @@
       border-color: #333;
   
       .top {
-        background-color: #111;
+        
         .logo {
           color: #999;
         }

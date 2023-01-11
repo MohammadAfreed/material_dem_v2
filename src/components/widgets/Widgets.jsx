@@ -1,4 +1,5 @@
 import { AccountBalanceOutlined, KeyboardArrowUp, MonetizationOnOutlined, Person2Outlined, ShoppingCartOutlined } from "@mui/icons-material"
+import { Navigate } from "react-router";
 import "./widgets.scss"
 
 export const Widgets = ({type}) => {
@@ -52,7 +53,7 @@ export const Widgets = ({type}) => {
 
   return (
     <div className="widget">
-        <div className="left">
+        <div className="left" onClick={()=><Navigate to={"/users"} replace={true}/>}>
             <span className="title">{data.title}</span>
             <span className="counter">{data.isMoney && "$"} {amount}</span>
             <span className="link">{data.link}</span>

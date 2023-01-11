@@ -1,7 +1,6 @@
 export function  CustomTooltip(props) {
     var price = "";
     var date = "";
-    console.log(props);
     if (props.data[props.label]) {
     price = props.data[props.label]["1. open"];
     date = props.data[props.label]["date"];

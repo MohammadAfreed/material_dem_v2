@@ -19,7 +19,8 @@ export const Chart = () => {
         {name: "June",Total:1800}, */
     ]
     useEffect(()=>{
-      fetch("https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=IBM&apikey=OFLRZC5AN23W0O59").then(
+         async function fetchdata(){
+          await fetch("https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=IBM&apikey=OFLRZC5AN23W0O59").then(
         res=>res.json()
       ).then(
         (result)=> {
@@ -28,13 +29,16 @@ export const Chart = () => {
             mydata.date=instance
             data.push(mydata)
           }
-          setItems(data.reverse())
+          setItems(data.reverse());
+          console.log(mydata);
         },
         (error)=>{
           setIsLoaded(true);
           setError(error);
         }
       )
+         }
+         fetchdata();
     },[])  
 
 
@@ -43,9 +47,7 @@ export const Chart = () => {
         <div className="title">Six months revenue</div>
         <ResponsiveContainer width="100%" aspect={2}>
         <LineChart width={500} height={300} margin={{ top: 175, right: 30, left: 20, bottom: 5  }} data={items}>
-        <Line dot={false}  type="monotone" dataKey="1. open" stroke="rgb(0,200,5)" yAxisId="100" />
-        <Line dot={true} type="monotone" dataKey={"5. Volume"} stroke="rgb(0,300,5)" yAxisId="100"/>
-        <XAxis id="1000"/>
+        <Line dot={false}  type="monotone" dataKey="1. open" stroke="rgb(0,200,5)" />
           <Tooltip content={<CustomTooltip data={items} />} />
         </LineChart>
         </ResponsiveContainer>
